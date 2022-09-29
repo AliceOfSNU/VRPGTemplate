@@ -9,9 +9,8 @@ public class NetState : NetworkBehaviour
 
     public ClientCharacterMovement ClientCharacter;
     public ServerCharacter ServerCharacter;
-    private void Awake()
+    private void Start()
     {
-
         if (NetworkManager.IsServer && !NetworkManager.IsHost) ServerCharacter.enabled = true;
         if (NetworkManager.IsClient || NetworkManager.IsHost) ClientCharacter.enabled = true;
     }

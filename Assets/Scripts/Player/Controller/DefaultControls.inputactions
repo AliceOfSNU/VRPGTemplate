@@ -11,8 +11,7 @@
                     "id": "4a769b6b-50f9-42c9-8a14-c38aa84c00b2",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
+                    "interactions": ""
                 },
                 {
                     "name": "QuickMove",
@@ -20,8 +19,7 @@
                     "id": "8be50786-2a56-4104-9212-94dfcdb9a048",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": ""
                 },
                 {
                     "name": "LocoTarget",
@@ -29,8 +27,7 @@
                     "id": "509afae6-f056-490e-95f2-d3a6ac65db31",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
+                    "interactions": ""
                 },
                 {
                     "name": "MoveTarget",
@@ -38,8 +35,7 @@
                     "id": "6e26bb72-4813-4886-a8f8-70e0a84e0249",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": ""
                 },
                 {
                     "name": "Jump",
@@ -47,8 +43,15 @@
                     "id": "4b2b4ec0-8b01-40b4-955e-1502a01f6133",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": ""
+                },
+                {
+                    "name": "Q",
+                    "type": "Button",
+                    "id": "9766cb2d-0682-4884-a772-74285ae1b0d8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
                 }
             ],
             "bindings": [
@@ -104,6 +107,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bf6e9eb7-70c9-40f2-84c8-d66162d43dae",
+                    "path": "<Keyboard>/q",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Q",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

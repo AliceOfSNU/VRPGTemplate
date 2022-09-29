@@ -568,6 +568,7 @@ GameObject:
   - component: {fileID: 1819390471879899608}
   - component: {fileID: 5755575216027493282}
   - component: {fileID: 1329711232895279969}
+  - component: {fileID: 596612558}
   m_Layer: 0
   m_Name: Character_Brute
   m_TagString: Untagged
@@ -623,6 +624,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _anim: {fileID: 5755575216027493282}
+--- !u!114 &596612558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329711232895279970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d0727d5ae3244e3b569694d3912374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 5755575216027493282}
 --- !u!1 &1338640463613688388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2243,6 +2257,7 @@ GameObject:
   - component: {fileID: 4414749248457940780}
   - component: {fileID: 7122326180843948414}
   - component: {fileID: 5348941502082389733}
+  - component: {fileID: 4713741812346839180}
   - component: {fileID: 1738825849855208841}
   m_Layer: 0
   m_Name: ClientCharacter
@@ -2297,7 +2312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 46d312a58e08acb4d89f467ccb74ebb3, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -2308,7 +2323,43 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4a769b6b-50f9-42c9-8a14-c38aa84c00b2
+    m_ActionName: Player/Walk[/Keyboard/z]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8be50786-2a56-4104-9212-94dfcdb9a048
+    m_ActionName: Player/QuickMove[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 509afae6-f056-490e-95f2-d3a6ac65db31
+    m_ActionName: Player/LocoTarget[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6e26bb72-4813-4886-a8f8-70e0a84e0249
+    m_ActionName: Player/MoveTarget[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4b2b4ec0-8b01-40b4-955e-1502a01f6133
+    m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4713741812346839180}
+        m_TargetAssemblyTypeName: ClientCharacter, Assembly-CSharp
+        m_MethodName: OnQ
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9766cb2d-0682-4884-a772-74285ae1b0d8
+    m_ActionName: Player/Q[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -2384,6 +2435,20 @@ MonoBehaviour:
   _gravity: -9.8
   _jumpHeight: 1
   _footTransform: {fileID: 5348941502082389731}
+--- !u!114 &4713741812346839180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5348941502082389734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03299a46ece810d42b8f9efad9b2ec25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _visual: {fileID: 1329711232895279969}
+  _netState: {fileID: 1738825849855208841}
 --- !u!114 &1738825849855208841
 MonoBehaviour:
   m_ObjectHideFlags: 0
