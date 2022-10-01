@@ -26,6 +26,15 @@ public class ClientCharacter : MonoBehaviour
         {
             if (!ActionTypeByKey.TryGetValue(Key.Q, out ActionType type)) return;
             _visual.PlayActionVisualization(type);
+
+            // draft a request
+            ActionRequestData request = new ActionRequestData();
+            request.ActionTypeEnum = ActionType.MeleeCombo;
+            request.CancelMovement = true;
+            request.Amount = 100;
+
+            // do it!
+            _netState.DoActionServerRPC(request);
         }
         else if (value.canceled)
         {
